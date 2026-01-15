@@ -22,13 +22,41 @@ a {
 }
 #colorPicker{
 	position:relative;
-	top:-600px;
-	right:530px;
+	
+	
 }
 #appleCanvas{
+	position: absolute;
+  width: 10vh;
+  height: auto;
+
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-6.5vw,5vh);
+	
+}
+.buy{
 	position:relative;
-	bottom:640px;
-	left:200px;
+	top:5vh;
+	border-radius:5px;
+	
+	width:100px;
+	height:50px;
+	background-color:black;
+	color:#E8732A;
+	font-size:30px;
+}
+
+.buy:hover{
+border:3px solid;
+
+}
+.color-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 a:hover,
 a:focus {
@@ -52,10 +80,15 @@ blockquote {
   font-size: 0.86em;
   line-height: 1.8em;
 }
-
+.novo{
+	 min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 40vh;
+}
 .tm-section-pad-top {
-  padding-top: 300px;
-	
+  
 }
 
 .tm-content-box {
@@ -84,9 +117,10 @@ blockquote {
   background-color: black;
 }
 .bruh{
-	position:relative;
-	left:-200px;
-	top:-5px;
+ max-height: 40px;
+
+  width: auto;
+  float:left;
 }
 /* Navbar */
 
@@ -105,7 +139,7 @@ blockquote {
   background-color: white;
   border-bottom: 1px solid #e9ecef;
 }
-.japka1{
+/*.japka1{
 	position:relative;
 	bottom:50px;
 	width:50%;
@@ -113,15 +147,37 @@ blockquote {
 }
 .jabkatel{
 	position:relative;
-	top:-310px;
-	
+	top:-29vh;
+	left:27vh;
+}*/
+.jabkatel {
+  width: 70vh;
+  height: auto;
+  
+}
+.japka1 {
+  position: relative;
+  width:30%;
+  bottom:10vh;
+}
+.device-group {
+  position: relative;
+float:right;
+  /* off-center start (safe on zoom) */
+  transform: translate(1vw);
+
+  margin-top:-40vh;     
+  /* center-ish base */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 .navbar-brand {
-	position:relative;
-  color: black;
-  font-size: 1.4rem;
-  font-weight: bold;
-  left:-200px;
+	
+ 
+    position: static;
+
  
   
 }
@@ -138,6 +194,9 @@ blockquote {
 
 .nav-item {
   list-style: none;
+  max-height: 10vh;
+
+  width: auto;
 }
 
 .tm-nav-link {
@@ -154,6 +213,7 @@ blockquote {
   color: #FFF;
   background-color: #E8732A ;
   text-shadow:2px 2px 2px  #333;
+  border:1px solid;
 }
 
 .navbar-toggler {
@@ -163,7 +223,7 @@ blockquote {
 }
 
 .navbar-toggler-icon {
-  color: white;
+  color: black;
   padding-top: 6px;
 }
 
@@ -179,12 +239,12 @@ blockquote {
 
 #infinite {
 	background-color: black;
-  
-	background-repeat:no repeat;
-	height:100vh;
+    min-height: 100vh;
+	
+	
  overflow: hidden;
 	
-  position: relative;
+  
   
  
 }
@@ -224,7 +284,13 @@ background-size: cover;
 background-size: cover;
   }
 }
-
+.container{
+	min-height: 100vh;
+	width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;  
+}
 .tm-hero-text-container {
   width: 100%;
   min-height: 100vh;
@@ -245,7 +311,7 @@ background-size: cover;
 }
 
 .tm-hero-title {
-  font-size:10rem;
+  font-size: clamp(3rem, 8vw, 10rem);
   text-shadow: 2px 2px 2px #333;
   color:#E8732A;
   font-weight:bold;
@@ -257,7 +323,7 @@ background-size: cover;
 
 .tm-intro-next {
   position: absolute;
-  bottom: 100px;
+  bottom: 10vh;
   left: 0;
   right: 0;
 }
@@ -273,23 +339,27 @@ background-size: cover;
 }
 
 .tm-down-arrow-link {
-  display: block;
-  margin-top: 18%;
+  display:block;
+  
 }
 
 .tm-down-arrow {
+	
+	font-size: clamp(0.9rem, 2vw, 2rem);
   	color: #FFF;
     cursor: pointer;
     background: black;
-    padding: 15px 40px;
+    padding: 0.8em 2em;
     transition: all 0.3s ease;
+	position:relative;
+	top:9vh;
 }
 
 .tm-down-arrow:hover,
 .tm-down-arrow:focus {
   color: #FFF;
   background:  #E8732A;
-  padding: 20px 50px;
+  transform: scale(1.05);
 }
 
 /* Introduction */
@@ -318,14 +388,15 @@ background-size: cover;
 
 /* Testimonials */
 #testimonials {
-  color: white;
-  background-color:white;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  
+ 
   position: relative;
-  margin-top:-200px;
-  margin-bottom:-200px;
+	top:-50vh;
+	max-height:30vh;
+	width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;  
 }
 
 @media (max-width: 991px) {
@@ -687,7 +758,7 @@ p {
 
 @media (min-width: 768px) {
   .tm-intro-text-container {
-    padding-left: 0px;
+  
   }
 
   .navbar-expand-md .navbar-nav .nav-link {
